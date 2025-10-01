@@ -1,0 +1,32 @@
+{
+  "name": "qa-automation-course",
+  "version": "1.0.0",
+  "description": "QA automation course project for learning JavaScript and Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "node lectures/01-development-env-basics/homework/task01/verify-setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiazBhuiyanX/qa-automation-course.git"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "testing",
+    "javascript"
+  ],
+  "author": "Riaz Bhuiyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiazBhuiyanX/qa-automation-course/issues"
+  },
+  "homepage": "https://github.com/RiazBhuiyanX/qa-automation-course#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2"
+  }
+}
