@@ -51,6 +51,8 @@ function logTestStep(stepNumber, description, status) {
     console.log(logMessage);
   } else if (status === "fail") {
     console.error(logMessage);
+  } else if (status === "skip" || status === "skipped") {
+    console.warn(logMessage);
   } else {
     console.log(logMessage);
   }
@@ -146,3 +148,13 @@ function logSystemInfo() {
     debugModeType: typeof debugMode,
   };
 }
+
+export {
+  startTestSuite,
+  endTestSuite,
+  logTestStep,
+  generateTestReport,
+  debugVariable,
+  compareExpectedActual,
+  logSystemInfo,
+};

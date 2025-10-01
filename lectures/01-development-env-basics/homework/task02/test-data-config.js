@@ -86,4 +86,19 @@ function logTestConfiguration() {
   console.log("");
 }
 
-export { BASE_URL, DEFAULT_TIMEOUT, API_ENDPOINTS, testUserEmail, debugMode };
+export {
+  BASE_URL,
+  DEFAULT_TIMEOUT,
+  API_ENDPOINTS,
+  testUserEmail,
+  adminUserEmail,
+  debugMode,
+  runSlowTests,
+  useTestData,
+  validateEmail,
+  validatePassword,
+  generateUniqueEmail,
+  logTestConfiguration,
+  expectedWelcomeMessage,
+  testUserPassword,
+};

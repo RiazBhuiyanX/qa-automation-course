@@ -5,7 +5,7 @@ function checkNodeVersion() {
 }
 
 function checkNpmVersion() {
-  const npmVersion = process.env.npm_config_user_agent || 'Not available';
+  const npmVersion = process.env.npm_config_user_agent || "Not available";
   console.log("NPM version:", npmVersion);
   return npmVersion;
 }
@@ -13,12 +13,14 @@ function checkNpmVersion() {
 function displayEnvironmentInfo() {
   checkNodeVersion();
   checkNpmVersion();
-  
+
   const platform = process.platform;
   console.log("Operating System:", platform);
-  
+
   const currentDirectory = process.cwd();
   console.log("Current Working Directory:", currentDirectory);
 }
 
 displayEnvironmentInfo();
+
+export { displayEnvironmentInfo };
