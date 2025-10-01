@@ -86,13 +86,4 @@ function logTestConfiguration() {
   console.log("");
 }
 
-logTestConfiguration();
-validateEmail(testUserEmail);
-validateEmail(adminUserEmail);
-validatePassword(testUserPassword);
-generateUniqueEmail("test");
-
-validateEmail(generateUniqueEmail("test"));
-validateEmail("test.test.testmail.com");
-validateEmail("test@testmailcom");
-validatePassword("test123");
+export { BASE_URL, DEFAULT_TIMEOUT, API_ENDPOINTS, testUserEmail, debugMode };
