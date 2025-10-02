@@ -47,44 +47,42 @@ function logTestConfiguration() {
   const timestamp = Date.now();
   const currentDate = new Date(timestamp);
 
+  console.log("\n=========================================");
+  console.log("       CURRENT TEST CONFIGURATION        ");
+  console.log("=========================================");
+
   // Display timestamp
-  console.log("========================================");
-  console.log("");
-  console.log("Configuration loaded at: " + currentDate);
+  console.log("\nConfiguration loaded at: " + currentDate);
   console.log("Timestamp: " + timestamp);
-  console.log("");
 
   // Display configuration constants
-  console.log("--- Configuration Constants ---");
+  console.log("\n--- Configuration Constants ---");
   console.log("BASE_URL: " + BASE_URL);
   console.log("DEFAULT_TIMEOUT: " + DEFAULT_TIMEOUT + " ms");
-  console.log("");
 
   // Display API endpoints
-  console.log("--- API Endpoints ---");
+  console.log("\n--- API Endpoints ---");
   console.log("Login: " + API_ENDPOINTS.login);
   console.log("Users: " + API_ENDPOINTS.users);
   console.log("Products: " + API_ENDPOINTS.products);
-  console.log("");
 
   // Display test data
-  console.log("--- Test Data ---");
+  console.log("\n--- Test Data ---");
   console.log("Test User Email: " + testUserEmail);
   console.log("Test User Password: " + testUserPassword);
   console.log("Admin User Email: " + adminUserEmail);
   console.log("Expected Welcome Message: " + expectedWelcomeMessage);
-  console.log("");
 
   // Display feature flags
-  console.log("--- Feature Flags ---");
+  console.log("\n--- Feature Flags ---");
   console.log("Debug Mode: " + debugMode);
   console.log("Run Slow Tests: " + runSlowTests);
   console.log("Use Test Data: " + useTestData);
-  console.log("");
 
-  console.log("========================================");
-  console.log("");
+  console.log("\n=========================================\n");
 }
+
+logTestConfiguration();
 
 export {
   BASE_URL,
