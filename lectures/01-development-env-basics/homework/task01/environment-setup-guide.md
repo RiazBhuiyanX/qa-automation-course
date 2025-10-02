@@ -4,7 +4,7 @@
 
 Before starting with this QA automation course project, ensure you have the following software installed on your system:
 
-- **Node.js** (version 18.x or higher recommended)
+- **Node.js** (version 18 or higher recommended)
 - **npm** (comes bundled with Node.js)
 - **Visual Studio Code** (VS Code) - recommended code editor
 - **Git** (optional, but recommended for version control)

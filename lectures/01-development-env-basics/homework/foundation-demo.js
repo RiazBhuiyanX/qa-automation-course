@@ -23,14 +23,11 @@
 import { displayEnvironmentInfo } from "./task01/verify-setup.js";
 
 import {
-  BASE_URL,
-  DEFAULT_TIMEOUT,
   API_ENDPOINTS,
   testUserEmail,
   testUserPassword,
   adminUserEmail,
   expectedWelcomeMessage,
-  debugMode,
   validateEmail,
   validatePassword,
   generateUniqueEmail,
@@ -48,12 +45,6 @@ import {
 } from "./task03/test-execution-helpers.js";
 
 function simulateLoginTest() {
-  console.log("\n");
-  console.log("================================================");
-  console.log("  SIMULATED LOGIN TEST");
-  console.log("================================================");
-  console.log("\n");
-
   // Start the test suite
   const startTime = startTestSuite("Login Test Suite");
 
@@ -79,14 +70,14 @@ function simulateLoginTest() {
 
   // Step 6: Simulate failed authentication (demo failure)
   logTestStep(6, "Authenticate with invalid credentials", "fail");
-  console.log("Simulated authentication failure for demo purposes");
+  console.log("Simulated authentication failure for demo purposes\n");
 
   // Step 7: Skip two-factor authentication test (not implemented yet)
   logTestStep(7, "Verify two-factor authentication", "skip");
   console.log("Two-factor authentication testing not implemented yet");
 
   // End the test suite
-  const duration = endTestSuite("Login Test Suite", startTime);
+  endTestSuite("Login Test Suite", startTime);
 
   // Generate test report
   const testResults = {
@@ -95,18 +86,10 @@ function simulateLoginTest() {
     skipped: 1,
   };
 
-  const summary = generateTestReport(testResults);
-
-  console.log("\n");
-  console.log("Test suite completed in " + duration + " ms");
-  console.log("Pass rate: " + summary.passPercentage + "%");
-  console.log("\n");
-
-  return summary;
+  generateTestReport(testResults);
 }
 
 function runFoundationDemo() {
-  console.log("\n");
   console.log("================================================");
   console.log("  QA AUTOMATION FOUNDATION DEMO");
   console.log("  Lecture 01 - Homework Integration");
@@ -120,13 +103,9 @@ function runFoundationDemo() {
   console.log("STEP 1: Verify Development Environment");
   console.log("---------------------------------------");
   console.log("Checking Node.js, npm, and system configuration...");
-  console.log("\n");
 
   displayEnvironmentInfo();
-  console.log("\n");
-
   logSystemInfo();
-  console.log("\n");
 
   // ==========================================
   // STEP 2: Load Configuration (Task 2)
@@ -135,11 +114,8 @@ function runFoundationDemo() {
   console.log("STEP 2: Load Test Configuration");
   console.log("--------------------------------");
   console.log("Loading test data and environment settings...");
-  console.log("\n");
 
   logTestConfiguration();
-
-  console.log("\n");
 
   // ==========================================
   // STEP 3: Validate Test Data (Task 2)
@@ -147,14 +123,11 @@ function runFoundationDemo() {
 
   console.log("STEP 3: Validate Test Data");
   console.log("--------------------------");
-  console.log("Validating email addresses and passwords...");
-  console.log("\n");
+  console.log("Validating email addresses and passwords...\n");
 
   validateEmail(testUserEmail);
   validateEmail(adminUserEmail);
   validatePassword(testUserPassword);
-
-  console.log("\n");
 
   // ==========================================
   // STEP 4 & 5: Execute Test Scenario and Report (Task 3)
@@ -163,11 +136,10 @@ function runFoundationDemo() {
   console.log("STEP 4: Execute Test Scenario");
   console.log("------------------------------");
   console.log("Running simulated login test...");
-  console.log("\n");
 
   simulateLoginTest();
 
-  console.log("================================================");
+  console.log("\n================================================");
   console.log("  FOUNDATION DEMO COMPLETED");
   console.log("================================================");
   console.log("\n");

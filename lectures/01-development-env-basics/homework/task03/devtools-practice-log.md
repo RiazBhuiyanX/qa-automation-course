@@ -14,10 +14,16 @@
 ### 1. Console Log Practice
 
 **Command:**
+
+```bash
 console.log('QA DevTools practice')
+```
 
 **Result:**
+
+```bash
 QA DevTools practice
+```
 
 **Description:** Successfully logged a custom message to the console. This command is fundamental for debugging and outputting information during test execution.
 
@@ -26,10 +32,16 @@ QA DevTools practice
 ### 2. Get Page Title
 
 **Command:**
+
+```bash
 document.title
+```
 
 **Result:**
+
+```bash
 'Example Domain'
+```
 
 **Description:** Retrieved the current page title. This is useful for verifying that the correct page has loaded during automated tests.
 
@@ -38,10 +50,16 @@ document.title
 ### 3. Get Current URL
 
 **Command:**
+
+```bash
 window.location.href
+```
 
 **Result:**
+
+```bash
 'https://example.com/'
+```
 
 **Description:** Obtained the full URL of the current page. Essential for URL validation and navigation verification in test scenarios.
 
@@ -50,14 +68,20 @@ window.location.href
 ### 4. Query All Paragraph Elements
 
 **Command:**
+
+```bash
 document.querySelectorAll('p')
+```
 
 **Result:**
+
+```bash
 NodeList(2) [p, p]
 0: p
 1: p
 length: 2
 [[Prototype]]: NodeList
+```
 
 **Description:** Found 2 paragraph elements on the page. This command demonstrates how to locate and count specific HTML elements, which is crucial for element verification in automated testing.
 
@@ -76,9 +100,6 @@ length: 2
 
 ![DevTools Console Practice](screenshot-devtools-practice.png)
 
-*Screenshot showing all executed commands and their results in the Chrome DevTools Console*
+_Screenshot showing all executed commands and their results in the Chrome DevTools Console_
 
 ---
-
-
-

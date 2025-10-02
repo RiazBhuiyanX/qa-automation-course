@@ -5,14 +5,14 @@ import {
   testUserEmail,
   debugMode,
 } from "../task02/test-data-config.js";
+
 function startTestSuite(suiteName) {
   console.log("========================================");
   console.log("  TEST SUITE: " + suiteName);
-  console.log("========================================");
+  console.log("========================================\n");
 
   const startTime = new Date().toISOString();
   console.log("Start Time: " + startTime);
-  console.log("");
 
   return startTime;
 }
@@ -24,13 +24,12 @@ function endTestSuite(suiteName, startTime) {
   const endDate = new Date(endTime);
   const duration = endDate - startDate;
 
-  console.log("========================================");
+  console.log("\n========================================");
   console.log("  TEST SUITE COMPLETED: " + suiteName);
   console.log("========================================");
   console.log("Start Time: " + startTime);
   console.log("End Time: " + endTime);
-  console.log("Duration: " + duration + " ms");
-  console.log("========================================");
+  console.log("Duration: " + duration + " ms\n");
 
   return duration;
 }
@@ -72,14 +71,11 @@ function generateTestReport(testResults) {
   console.log("========================================");
   console.log("         TEST REPORT SUMMARY");
   console.log("========================================");
-  console.log("");
   console.log("Total Tests: " + totalTests);
   console.log("Passed: " + testResults.passed);
   console.log("Failed: " + testResults.failed);
   console.log("Skipped: " + testResults.skipped);
-  console.log("");
   console.log("Pass Rate: " + passPercentage + "%");
-  console.log("");
   console.log("========================================");
 
   const summary = {
@@ -100,7 +96,7 @@ function debugVariable(variableName, variableValue) {
   console.log("Name:  " + variableName);
   console.log("Value: " + variableValue);
   console.log("Type:  " + typeof variableValue);
-  console.log("========================================");
+  console.log("========================================\n");
 }
 
 function compareExpectedActual(expected, actual) {
@@ -118,7 +114,7 @@ function compareExpectedActual(expected, actual) {
     console.error("Result: MISMATCH ✗");
   }
 
-  console.log("========================================");
+  console.log("========================================\n");
 
   return isEqual;
 }
@@ -128,16 +124,14 @@ function logSystemInfo() {
 
   console.log("========================================");
   console.log(" System Info For Debugging");
-  console.log("========================================");
-  console.log("");
+  console.log("========================================\n");
   console.log("Timestamp: " + timestamp);
   console.log("BASE_URL type: " + typeof BASE_URL);
   console.log("DEFAULT_TIMEOUT type: " + typeof DEFAULT_TIMEOUT);
   console.log("API_ENDPOINTS type: " + typeof API_ENDPOINTS);
   console.log("testUserEmail type: " + typeof testUserEmail);
   console.log("debugMode type: " + typeof debugMode);
-  console.log("");
-  console.log("========================================");
+  console.log("========================================\n");
 
   return {
     timestamp: timestamp,

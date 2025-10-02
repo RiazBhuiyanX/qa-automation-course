@@ -17,20 +17,20 @@ const useTestData = true;
 
 function validateEmail(email) {
   if (email.includes("@") && email.includes(".")) {
-    console.log("Email " + email + " is valid");
+    console.log("Email " + email + " is valid\n");
     return true;
   } else {
-    console.log("Email " + email + " is invalid");
+    console.log("Email " + email + " is invalid\n");
     return false;
   }
 }
 
 function validatePassword(password) {
   if (password.length >= 8) {
-    console.log("Password " + password + " is valid");
+    console.log("Password " + password + " is valid\n");
     return true;
   } else {
-    console.log("Password " + password + " is invalid");
+    console.log("Password " + password + " is invalid\n");
     return false;
   }
 }
@@ -38,7 +38,7 @@ function validatePassword(password) {
 function generateUniqueEmail(baseName) {
   const timestamp = Date.now();
   const uniqueEmail = baseName + timestamp + "@testmail.com";
-  console.log(uniqueEmail);
+  console.log(uniqueEmail + "\n");
   return uniqueEmail;
 }
 
@@ -81,8 +81,6 @@ function logTestConfiguration() {
 
   console.log("\n=========================================\n");
 }
-
-logTestConfiguration();
 
 export {
   BASE_URL,

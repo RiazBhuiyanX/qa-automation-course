@@ -26,6 +26,7 @@ function displayEnvironmentInfo() {
 
   const currentDirectory = process.cwd();
   console.log("Current Working Directory:", currentDirectory);
+  console.log("\n");
 }
 
 displayEnvironmentInfo();
