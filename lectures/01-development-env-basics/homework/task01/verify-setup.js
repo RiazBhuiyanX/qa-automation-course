@@ -1,3 +1,5 @@
+import { execSync } from "child_process";
+
 function checkNodeVersion() {
   const version = process.version;
   console.log("Node.js version:", version);
@@ -5,12 +7,17 @@ function checkNodeVersion() {
 }
 
 function checkNpmVersion() {
-  const npmVersion = process.env.npm_config_user_agent || "Not available";
+  const npmVersion =
+    execSync("npm --version").toString().trim() || "Not available";
   console.log("NPM version:", npmVersion);
   return npmVersion;
 }
 
 function displayEnvironmentInfo() {
+  console.log("\n===========================================");
+  console.log("  QA AUTOMATION ENVIRONMENT VERIFICATION   ");
+  console.log("===========================================\n");
+
   checkNodeVersion();
   checkNpmVersion();
 
