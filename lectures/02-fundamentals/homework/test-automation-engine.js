@@ -9,7 +9,7 @@ import {
   incrementTestCounter,
   processTestEnvironment,
   createTestMessage,
-} from "./homework/task01/test-data-generators.js";
+} from "./task01/test-data-generators.js";
 import {
   handleTestEnvironment,
   determineTestAction,
@@ -22,7 +22,7 @@ import {
   getTestPriority,
   determineTimeout,
   formatTestDuration,
-} from "./homework/task03/test-decision-engine.js";
+} from "./task03/test-decision-engine.js";
 import {
   validateCompleteAPIResponse,
   checkTestEnvironmentAccess,
@@ -37,7 +37,7 @@ import {
   validatePerformanceRange,
   validateStatusCode,
   validateResponseTime,
-} from "./homework/task02/test-validators.js";
+} from "./task02/test-validators.js";
 
 function executeTestScenario(
   scenarioName,
