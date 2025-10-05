@@ -261,19 +261,16 @@ function complexTestDecision(userRole, environment, testType, hasPermission) {
   return result;
 }
 
-complexTestDecision("tester", "production", "critical", true);
-determineTestAction("pass", 1);
-validateTestData("sOo1O@example.com", "password123", 25);
-validateTestData("invalid-email", "password", 20);
-processTestResults(10, 8, "production");
-processTestResults(5, 3, "staging");
-getTestPriority(0, 500);
-getTestStatus(true);
-determineTimeout("staging");
-formatTestDuration(500);
-handleTestEnvironment("production");
-processHTTPStatusCode(200);
-selectTestDataSet("login");
-selectTestDataSet("performance");
-selectTestDataSet("unknown");
-selectTestDataSet("api");
+export {
+  handleTestEnvironment,
+  determineTestAction,
+  complexTestDecision,
+  selectTestDataSet,
+  validateTestData,
+  processHTTPStatusCode,
+  processTestResults,
+  getTestStatus,
+  getTestPriority,
+  determineTimeout,
+  formatTestDuration,
+};

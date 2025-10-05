@@ -183,21 +183,18 @@ function complexValidationScenario(
   return finalResult;
 }
 
-validateStatusCode(200, 200);
-validateResponseTime(100, 200);
-validatePerformanceRange(150, 100, 200);
-compareVersions("1.0.0", "1.0.0");
-validateErrorMessage("This is an error message");
-extractUserIdFromResponse("ID: 12345");
-validateEmailFormat("sOo1O@example.com");
-validateEmailFormat("invalid-email");
-validateEmailFormat("invalid.email");
-validateEmailFormat("invalid.email@");
-processTestDataCSV("test1,test2,test3");
-normalizeTestName("   Test Name Abathsdshdbhasdsh  ");
-validateCompleteAPIResponse(200, 100, true, 0);
-validateCompleteAPIResponse(200, 1500, true, 0);
-checkTestEnvironmentAccess("admin", true, "dev");
-validateTestNotFailed(false, false, false);
-complexValidationScenario(200, 100, "admin", 10, "dev");
-complexValidationScenario(200, 400, "tester", 1, "staging");
+export {
+  validateCompleteAPIResponse,
+  checkTestEnvironmentAccess,
+  validateTestNotFailed,
+  complexValidationScenario,
+  processTestDataCSV,
+  normalizeTestName,
+  validateEmailFormat,
+  extractUserIdFromResponse,
+  validateErrorMessage,
+  compareVersions,
+  validatePerformanceRange,
+  validateStatusCode,
+  validateResponseTime,
+};

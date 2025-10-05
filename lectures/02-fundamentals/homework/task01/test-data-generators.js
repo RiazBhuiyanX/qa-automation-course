@@ -116,3 +116,16 @@ function buildTestSummary(testName, environment, userCount, avgResponseTime) {
   console.log(summary);
   return summary;
 }
+
+export {
+  generateTestUserName,
+  buildTestURL,
+  buildTestSummary,
+  extractTestInfo,
+  calculateResponseTime,
+  calculateSuccessRate,
+  adjustTimeout,
+  incrementTestCounter,
+  processTestEnvironment,
+  createTestMessage,
+};
